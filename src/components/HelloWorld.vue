@@ -83,6 +83,8 @@
         >
       </li>
       <li>
+        <Icon name='arrow-lift' style='font-size:30px' fill='#42b983'></Icon>
+        <van-button type="primary">aaaaa</van-button>
         <a
           href="https://github.com/vuejs/awesome-vue"
           target="_blank"
@@ -96,10 +98,21 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import {Button} from 'vant'
 
-@Component
+@Component({
+  components:{
+    [Button.name] : Button
+  }
+})
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+  cons(){
+    
+  }
+  created() {
+   this.cons() 
+  }
 }
 </script>
 
@@ -119,4 +132,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>
