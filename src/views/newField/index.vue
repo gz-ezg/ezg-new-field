@@ -15,12 +15,17 @@
         </van-cell-group>
       </van-col>
     </van-row>
+    <van-row style="margin-top:16px">
+      <van-col span="24">
+        
+      </van-col>
+    </van-row>
   </div>
 </template>
 
 <script lang='ts'>
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import {Field,Row,Col,CellGroup} from 'vant'
+import {Field,Row,Col,CellGroup,Uploader} from 'vant'
 
 
 @Component({
@@ -29,6 +34,7 @@ import {Field,Row,Col,CellGroup} from 'vant'
     [Row.name]:Row,
     [Col.name]:Col,
     [CellGroup.name]:CellGroup,
+    [Uploader.name]:Uploader,
   }
 })
 export default class newField extends Vue {
